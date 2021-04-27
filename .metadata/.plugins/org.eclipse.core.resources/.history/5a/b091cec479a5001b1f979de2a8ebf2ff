@@ -1,0 +1,4 @@
+spring.applicatoin.name = config-service
+server.port = 9999
+
+eureka.client.register-with-eureka=true

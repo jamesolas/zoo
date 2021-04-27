@@ -1,0 +1,5 @@
+server.servlet.context-path = /zoo
+
+spring.datasource.url = postgres
+spring.datasource.username=postgres
+spring.datasource.password=waves

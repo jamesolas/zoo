@@ -1,0 +1,2 @@
+spring.applicatoin.name = config-service
+server.port = 9999

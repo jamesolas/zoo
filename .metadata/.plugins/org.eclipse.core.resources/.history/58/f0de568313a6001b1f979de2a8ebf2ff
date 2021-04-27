@@ -1,0 +1,20 @@
+spring.application.name=login
+server.port=7700
+
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+eureka.client.service-url.defaultZone=http://localhost:8888/eureka/
+eureka.instance.instance-id=login-instance-1
+
+server.servlet.context-path = /zoo
+
+spring.datasource.url = jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=waves
+spring.datasource.driver-class-name=postgresql
+
+spring.jpa.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto = create
+spring.jpa.hibernate.show-sql = true
+
+

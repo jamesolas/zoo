@@ -1,0 +1,9 @@
+server.servlet.context-path = /zoo
+
+spring.datasource.url = postgres
+spring.datasource.username=postgres
+spring.datasource.password=waves
+spring.datasource.driver-class-name=postgresql
+
+spring.jpa.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+
