@@ -21,8 +21,14 @@ public class Client {
 	@Column (name = "clientid", nullable = false)
 	private int clientId;
 	
-	@Column (name = "client_name")
-	private String clientName;
+	@Column (name = "client_fist_name")
+	private String clientFirstName;
+	
+	@Column (name = "client_last_name")
+	private String clientLastName;
+	
+	@Column (name = "client_email")
+	private String clientEmail;
 	
 	@Column (name = "client_password")
 	private String clientPassword;
