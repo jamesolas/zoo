@@ -1,4 +1,4 @@
-package Service;
+package com.app.service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -6,10 +6,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import model.Client;
-import repository.LoginRepository;
+import com.app.model.Client;
+import com.app.repository.LoginRepository;
 
-@Service
+@Service (value = "LoginService")
 public class LoginService {
 
 	@Autowired
@@ -20,7 +20,7 @@ public class LoginService {
 	}
 	
 	public Client login(String email, String password, HttpServletRequest request) {
-		Client client= this.loginRepository.findbyEmailAndPassword(email, password);
+		Client client= this.loginRepository.findByEmailAndPassword(email, password);
 		if(client != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("client", client);

@@ -1,4 +1,4 @@
-package controller;
+package com.app.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import Service.LoginService;
-import model.Client;
+import com.app.model.Client;
+import com.app.service.LoginService;
 
 @CrossOrigin (origins = {"htpp://localhost:4200"})
 @RequestMapping (path = "/login")
-@RestController (value = "LoginController")
+@RestController (value = "loginController")
 public class LoginController {
 	
 	@Autowired
 	private LoginService loginService;
 	
-	@PostMapping (path = "create")
+	@PostMapping (path = "/create")
 	public Client createAccount(Client client) {
 		return this.loginService.createAccount(client);
 	}
 	
-	@PostMapping (path = "login")
+	@PostMapping (path = "/login")
 	public Client login(String email, String password, HttpServletRequest request) {
 		return this.loginService.login(email, password, request);
 	}
