@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +21,8 @@ public class LoginController {
 	private LoginService loginService;
 	
 	@PostMapping (path = "/create")
-	public Client createAccount(Client client) {
+	public Client createAccount(@RequestBody Client client) {
+		System.out.println(client);
 		return this.loginService.createAccount(client);
 	}
 	

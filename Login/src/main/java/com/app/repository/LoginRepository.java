@@ -5,11 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.app.model.Client;
 
-@Repository (value = "LoginRepository")
+@Repository (value = "loginRepository")
 public interface LoginRepository extends JpaRepository <Client, Integer>{
 	
 	//create new account
-	Client save(Client client);
+	<C extends Client> C save(Client client);
 	
 	//log in
 	public Client findByEmailAndPassword(String email, String password); 

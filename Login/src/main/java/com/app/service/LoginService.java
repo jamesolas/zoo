@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.app.model.Client;
 import com.app.repository.LoginRepository;
 
-@Service (value = "LoginService")
+@Service (value = "loginService")
 public class LoginService {
 
 	@Autowired
