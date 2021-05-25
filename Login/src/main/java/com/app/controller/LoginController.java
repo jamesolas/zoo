@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.model.Client;
@@ -27,7 +28,9 @@ public class LoginController {
 	}
 	
 	@PostMapping (path = "/login")
-	public Client login(String email, String password, HttpServletRequest request) {
+	public Client login(@RequestParam String email,@RequestParam String password, HttpServletRequest request) {
+		System.out.println(email);
+		System.out.println(password);
 		return this.loginService.login(email, password, request);
 	}
 
